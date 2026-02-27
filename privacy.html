@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy - SleepSleuth</title>
+  <meta name="description" content="Privacy Policy for the SleepSleuth macOS application." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <span class="nav-icon">&#127769;</span> SleepSleuth
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="legal container">
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: February 27, 2026</p>
+
+    <h2>Overview</h2>
+    <p>SleepSleuth ("the App") is a macOS menu bar utility that monitors power assertions on your Mac. Your privacy is important to us. This policy explains what data the App accesses, how it is used, and your choices.</p>
+
+    <h2>Data We Collect</h2>
+    <p><strong>We do not collect, transmit, or store any personal data on external servers.</strong> SleepSleuth operates entirely on your device.</p>
+
+    <h2>Data Accessed Locally</h2>
+    <p>To function, the App reads the following information from your Mac:</p>
+    <ul>
+      <li><strong>Power assertion data</strong> &mdash; The App uses Apple&rsquo;s IOPMLib API to query which processes currently hold power assertions (e.g., preventing sleep). This includes process names, process IDs, assertion types, and reasons.</li>
+      <li><strong>Process metadata</strong> &mdash; For each process holding an assertion, the App may resolve the application name, bundle identifier, and icon from the local file system.</li>
+      <li><strong>Assertion history</strong> &mdash; The App stores a rolling 7-day history of assertion events as a JSON file in your local Application Support directory (<code>~/Library/Application Support/SleepSleuth/</code>). This file never leaves your device.</li>
+    </ul>
+
+    <h2>Data Sharing</h2>
+    <p>SleepSleuth does not:</p>
+    <ul>
+      <li>Send any data over the network</li>
+      <li>Include analytics or tracking frameworks</li>
+      <li>Communicate with any external servers</li>
+      <li>Use cookies or web-based tracking</li>
+    </ul>
+
+    <h2>Notifications</h2>
+    <p>If you enable notifications, the App uses Apple&rsquo;s local notification system (UNUserNotificationCenter) to alert you when new power assertions are detected. These notifications are generated and delivered entirely on your device.</p>
+
+    <h2>Third-Party Services</h2>
+    <p>SleepSleuth does not integrate with any third-party services, SDKs, or analytics platforms.</p>
+
+    <h2>Data Retention</h2>
+    <p>Assertion history is automatically pruned to a 7-day rolling window. You can clear all history at any time from the History view within the App. Uninstalling the App and deleting the Application Support folder removes all stored data.</p>
+
+    <h2>Children&rsquo;s Privacy</h2>
+    <p>SleepSleuth does not collect any personal information from anyone, including children under the age of 13.</p>
+
+    <h2>Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any changes will be reflected on this page with an updated "Last updated" date.</p>
+
+    <h2>Contact</h2>
+    <p>If you have questions about this Privacy Policy, please open an issue on our <a href="https://github.com/nicklama/sleepguard">GitHub repository</a>.</p>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="https://github.com/nicklama/sleepguard">GitHub</a>
+      </div>
+      <p>&copy; 2026 SleepSleuth. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
