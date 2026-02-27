@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support - SleepSleuth</title>
+  <meta name="description" content="Get help with SleepSleuth, the macOS menu bar utility that monitors sleep-preventing processes." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container">
+      <a href="/" class="nav-brand">
+        <span class="nav-icon">&#127769;</span> SleepSleuth
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <main class="legal container">
+    <h1>Support</h1>
+    <p class="last-updated">We're here to help you get the most out of SleepSleuth.</p>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What does SleepSleuth do?</h3>
+    <p>SleepSleuth is a macOS menu bar utility that monitors power assertions &mdash; system-level flags that prevent your Mac from sleeping. It shows you which apps and processes are keeping your Mac awake and for how long.</p>
+
+    <h3>What macOS version do I need?</h3>
+    <p>SleepSleuth requires macOS 14 (Sonoma) or later.</p>
+
+    <h3>Does SleepSleuth collect any data?</h3>
+    <p>No. SleepSleuth operates entirely on your device. It does not send any data over the network, and includes no analytics or tracking. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+
+    <h3>Why is my Mac not sleeping?</h3>
+    <p>Open SleepSleuth from the menu bar to see a list of all active power assertions. Each entry shows the process name, the reason it gave for preventing sleep, and how long the assertion has been active. Common culprits include video players, backup utilities, and file sync apps.</p>
+
+    <h3>Can I stop a process from preventing sleep?</h3>
+    <p>For processes you own (non-system), SleepSleuth provides a copyable <code>kill</code> command and a button to open Terminal so you can terminate the process. System processes are shown for informational purposes only.</p>
+
+    <h3>Where is history data stored?</h3>
+    <p>Assertion history is stored locally at <code>~/Library/Application Support/SleepSleuth/history.json</code>. It is automatically pruned to a 7-day rolling window. You can clear all history from the History view within the app.</p>
+
+    <h3>How do I uninstall SleepSleuth?</h3>
+    <p>Drag the app to the Trash. To remove stored data as well, delete the folder at <code>~/Library/Application Support/SleepSleuth/</code>.</p>
+
+    <h2>Contact Us</h2>
+    <p>If your question isn't answered above, you can reach us by:</p>
+    <ul>
+      <li>Opening an issue on our <a href="https://github.com/dimaosipa/SleepSleuthWeb/issues">GitHub repository</a></li>
+      <li>Emailing us at <a href="mailto:support@sleepsleuth.app">support@sleepsleuth.app</a></li>
+    </ul>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+        <a href="https://github.com/nicklama/sleepguard">GitHub</a>
+      </div>
+      <p>&copy; 2026 SleepSleuth. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
