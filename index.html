@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SleepSleuth - Know What Keeps Your Mac Awake</title>
   <meta name="description" content="SleepSleuth is a lightweight macOS menu bar utility that monitors which apps and processes are preventing your Mac from sleeping." />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" sizes="any" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sleepsleuth.app/" />
+  <meta property="og:title" content="SleepSleuth - Know What Keeps Your Mac Awake" />
+  <meta property="og:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — in real time." />
+  <meta property="og:image" content="https://sleepsleuth.app/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SleepSleuth - Know What Keeps Your Mac Awake" />
+  <meta name="twitter:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — in real time." />
+  <meta name="twitter:image" content="https://sleepsleuth.app/og-image.png" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,7 +34,12 @@
       <a href="/" class="nav-brand">
         <span class="nav-icon">&#127769;</span> SleepSleuth
       </a>
-      <ul class="nav-links">
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-menu">
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="support.html">Support</a></li>
@@ -113,6 +137,23 @@
       <p>&copy; 2026 SleepSleuth. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    toggle.addEventListener('click', () => {
+      const open = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!open));
+      menu.classList.toggle('is-open', !open);
+    });
+    // Close menu when a link is tapped on mobile
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        toggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('is-open');
+      });
+    });
+  </script>
 
 </body>
 </html>
