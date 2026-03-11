@@ -238,6 +238,77 @@ img {
   flex-wrap: wrap;
 }
 
+/* ── What's New ──────────────────────────────────────────── */
+.whats-new {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  text-align: center;
+}
+
+.whats-new-badge {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 20px;
+  padding: 4px 14px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.whats-new h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.whats-new-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  text-align: left;
+}
+
+.whats-new-card {
+  background: var(--bg-card);
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  transition: background 0.2s;
+}
+
+.whats-new-card:hover {
+  background: var(--bg-card-hover);
+}
+
+.whats-new-card .icon {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+}
+
+.whats-new-card h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.whats-new-card p {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+.whats-new-card code {
+  font-family: "SF Mono", "Menlo", "Monaco", monospace;
+  font-size: 0.85em;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 4px;
+  padding: 1px 5px;
+}
+
 /* ── Features ────────────────────────────────────────────── */
 .features {
   padding: 80px 0;

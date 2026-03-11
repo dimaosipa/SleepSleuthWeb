@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SleepSleuth - Know What Keeps Your Mac Awake</title>
-  <meta name="description" content="SleepSleuth is a lightweight macOS menu bar utility that monitors which apps and processes are preventing your Mac from sleeping." />
+  <meta name="description" content="SleepSleuth is a lightweight macOS menu bar utility that monitors which apps and processes are preventing your Mac from sleeping — and lets you keep it awake on purpose." />
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -15,13 +15,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sleepsleuth.app/" />
   <meta property="og:title" content="SleepSleuth - Know What Keeps Your Mac Awake" />
-  <meta property="og:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — in real time." />
+  <meta property="og:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — and lets you keep it awake on purpose." />
   <meta property="og:image" content="https://sleepsleuth.app/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="SleepSleuth - Know What Keeps Your Mac Awake" />
-  <meta name="twitter:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — in real time." />
+  <meta name="twitter:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — and lets you keep it awake on purpose." />
   <meta name="twitter:image" content="https://sleepsleuth.app/og-image.png" />
 
   <link rel="stylesheet" href="style.css" />
@@ -40,10 +40,11 @@
         <span></span>
       </button>
       <ul class="nav-links" id="nav-menu">
+        <li><a href="#whats-new">What's New</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
         <li><a href="support.html">Support</a></li>
-        <li><a href="https://github.com/nicklama/sleepguard">GitHub</a></li>
+        <li><a href="https://github.com/dimaosipa/SleepGuard">GitHub</a></li>
       </ul>
     </div>
   </nav>
@@ -51,11 +52,34 @@
   <!-- Hero -->
   <section class="hero container">
     <div class="hero-icon">&#127769;</div>
-    <h1>Know what keeps<br />your Mac <span>awake</span></h1>
-    <p>SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping &mdash; in real time.</p>
+    <h1>Sleep visibility.<br /><span>And control.</span></h1>
+    <p>SleepSleuth lives in your menu bar and shows you exactly which apps and processes are keeping your Mac awake &mdash; and lets you keep it awake on purpose.</p>
     <div class="hero-buttons">
       <a href="https://apps.apple.com/app/id6759780816" class="btn btn-primary">Download on the Mac App Store</a>
-      <a href="https://github.com/nicklama/sleepguard" class="btn btn-secondary">View on GitHub</a>
+      <a href="https://github.com/dimaosipa/SleepGuard" class="btn btn-secondary">View on GitHub</a>
+    </div>
+  </section>
+
+  <!-- What's New in 1.1 -->
+  <section class="whats-new container" id="whats-new">
+    <div class="whats-new-badge">Version 1.1</div>
+    <h2>What&rsquo;s New</h2>
+    <div class="whats-new-grid">
+      <div class="whats-new-card">
+        <div class="icon">&#128204;</div>
+        <h3>Pin Feature</h3>
+        <p>Keep your Mac awake for the apps that need it. Select any running app or command-line tool and SleepSleuth holds a sleep assertion on its behalf for as long as it runs &mdash; no <code>caffeinate</code> hacks needed.</p>
+      </div>
+      <div class="whats-new-card">
+        <div class="icon">&#127919;</div>
+        <h3>Smart Re-Activation</h3>
+        <p>Pins persist across relaunches. When a pinned app comes back, SleepSleuth automatically re-applies the assertion. CLI tools like <code>ffmpeg</code> or <code>rsync</code> are tracked by executable path.</p>
+      </div>
+      <div class="whats-new-card">
+        <div class="icon">&#9201;</div>
+        <h3>Live Duration</h3>
+        <p>The assertion detail view now shows a real-time elapsed counter so you can see exactly how long a process has been holding your Mac awake.</p>
+      </div>
     </div>
   </section>
 
@@ -66,22 +90,22 @@
       <div class="feature-card">
         <div class="icon">&#128269;</div>
         <h3>Real-Time Monitoring</h3>
-        <p>Polls macOS power assertions every few seconds and listens for system changes, so you always have the latest picture.</p>
+        <p>Polls macOS power assertions every few seconds so you always have the latest picture &mdash; yellow icon means something is active, default means all clear.</p>
       </div>
       <div class="feature-card">
         <div class="icon">&#128203;</div>
         <h3>Detailed Assertion Info</h3>
-        <p>See the process name, reason, assertion type, and how long each assertion has been active &mdash; all at a glance.</p>
+        <p>See the process name, PID, assertion type, and a live elapsed-time counter for each active assertion &mdash; all at a glance.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128204;</div>
+        <h3>Pin Any App or CLI Tool</h3>
+        <p>Pick any running app or command-line tool from the inline process picker and SleepSleuth prevents sleep on its behalf. Pins survive relaunches and reactivate automatically.</p>
       </div>
       <div class="feature-card">
         <div class="icon">&#128276;</div>
         <h3>Notifications</h3>
-        <p>Get a native macOS notification whenever a new sleep-preventing assertion appears, so nothing sneaks by.</p>
-      </div>
-      <div class="feature-card">
-        <div class="icon">&#128200;</div>
-        <h3>History &amp; Statistics</h3>
-        <p>Track which processes are the worst offenders with a 7-day rolling history, daily counts, and total blocked time.</p>
+        <p>Get a native macOS notification whenever a new sleep-preventing assertion appears, so nothing sneaks by unnoticed.</p>
       </div>
       <div class="feature-card">
         <div class="icon">&#9889;</div>
@@ -91,7 +115,7 @@
       <div class="feature-card">
         <div class="icon">&#128171;</div>
         <h3>Lightweight &amp; Native</h3>
-        <p>Built with SwiftUI. No Electron, no web views. Runs quietly in the menu bar with minimal resource usage.</p>
+        <p>Built with SwiftUI for macOS 14+. No Electron, no web views, no telemetry. Runs quietly in the menu bar with minimal resource usage.</p>
       </div>
     </div>
   </section>
@@ -103,17 +127,17 @@
       <div class="step">
         <div class="step-number">1</div>
         <h3>Install</h3>
-        <p>Get SleepSleuth from the Mac App Store. It runs from your menu bar.</p>
+        <p>Get SleepSleuth from the Mac App Store. It runs quietly from your menu bar with no setup required.</p>
       </div>
       <div class="step">
         <div class="step-number">2</div>
         <h3>Monitor</h3>
-        <p>The menu bar icon fills in when something is preventing sleep. Click to see the full list.</p>
+        <p>The icon turns yellow whenever something holds your Mac awake. Click to see the full list with details and live durations.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
-        <h3>Act</h3>
-        <p>Drill into any assertion to see details, or kill the offending process directly from the app.</p>
+        <h3>Control</h3>
+        <p>Drill into any process to see details or kill it. Pin apps that need to keep your Mac awake &mdash; SleepSleuth handles the rest.</p>
       </div>
     </div>
   </section>
@@ -121,7 +145,7 @@
   <!-- CTA -->
   <section class="cta container" id="download">
     <h2>Take back your Mac&rsquo;s sleep</h2>
-    <p>Free, open-source, and built for macOS.</p>
+    <p>Free, open-source, and built for macOS 14+.</p>
     <a href="https://apps.apple.com/app/id6759780816" class="btn btn-primary">Get it on the Mac App Store</a>
   </section>
 
@@ -132,7 +156,7 @@
         <a href="privacy.html">Privacy Policy</a>
         <a href="terms.html">Terms of Use</a>
         <a href="support.html">Support</a>
-        <a href="https://github.com/nicklama/sleepguard">GitHub</a>
+        <a href="https://github.com/dimaosipa/SleepGuard">GitHub</a>
       </div>
       <p>&copy; 2026 SleepSleuth. All rights reserved.</p>
     </div>
