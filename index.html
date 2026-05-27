@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SleepSleuth - Know What Keeps Your Mac Awake</title>
-  <meta name="description" content="SleepSleuth is a lightweight macOS menu bar utility that monitors which apps and processes are preventing your Mac from sleeping — and lets you keep it awake on purpose." />
+  <title>SleepSleuth - Sleep Control and Coding Usage for Mac</title>
+  <meta name="description" content="SleepSleuth is a native macOS menu bar utility that shows what keeps your Mac awake, pins apps on purpose, and optionally tracks local AI coding token usage." />
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -14,14 +14,14 @@
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sleepsleuth.app/" />
-  <meta property="og:title" content="SleepSleuth - Know What Keeps Your Mac Awake" />
-  <meta property="og:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — and lets you keep it awake on purpose." />
+  <meta property="og:title" content="SleepSleuth - Sleep Control and Coding Usage for Mac" />
+  <meta property="og:description" content="SleepSleuth shows what keeps your Mac awake, pins apps on purpose, and optionally tracks local AI coding token usage from the menu bar." />
   <meta property="og:image" content="https://sleepsleuth.app/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="SleepSleuth - Know What Keeps Your Mac Awake" />
-  <meta name="twitter:description" content="SleepSleuth lives in your menu bar and shows you exactly which apps and processes are preventing your Mac from sleeping — and lets you keep it awake on purpose." />
+  <meta name="twitter:title" content="SleepSleuth - Sleep Control and Coding Usage for Mac" />
+  <meta name="twitter:description" content="SleepSleuth shows what keeps your Mac awake, pins apps on purpose, and optionally tracks local AI coding token usage from the menu bar." />
   <meta name="twitter:image" content="https://sleepsleuth.app/og-image.png" />
 
   <link rel="stylesheet" href="style.css" />
@@ -40,6 +40,7 @@
         <span></span>
       </button>
       <ul class="nav-links" id="nav-menu">
+        <li><a href="#screenshots">Screenshots</a></li>
         <li><a href="#whats-new">What's New</a></li>
         <li><a href="#features">Features</a></li>
         <li><a href="#how-it-works">How It Works</a></li>
@@ -51,32 +52,86 @@
   <!-- Hero -->
   <section class="hero container">
     <div class="hero-icon">&#127769;</div>
-    <h1>Sleep visibility.<br /><span>And control.</span></h1>
-    <p>SleepSleuth lives in your menu bar and shows you exactly which apps and processes are keeping your Mac awake &mdash; and lets you keep it awake on purpose.</p>
+    <h1>Know what keeps<br /><span>your Mac awake.</span></h1>
+    <p>SleepSleuth lives in your menu bar, shows which apps and processes are blocking sleep, pins long-running work on purpose, and optionally tracks local AI coding token usage.</p>
     <div class="hero-buttons">
       <a href="https://apps.apple.com/app/id6759780816" class="btn btn-primary">Download on the Mac App Store</a>
     </div>
   </section>
 
-  <!-- What's New in 1.1 -->
+  <!-- Screenshots -->
+  <section class="screenshots container" id="screenshots" aria-labelledby="screenshots-title">
+    <div class="section-eyebrow">Inside SleepSleuth</div>
+    <h2 id="screenshots-title">See what is keeping your Mac awake</h2>
+    <p class="section-intro">From the menu bar, SleepSleuth gives you a focused view of live sleep blockers, intentional pins, history, and optional AI coding usage.</p>
+    <div class="screenshots-grid">
+      <figure class="screenshot-card screenshot-card-wide">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/sleepsleuth-current-sleep-blockers-640.webp 640w, assets/screenshots/sleepsleuth-current-sleep-blockers-960.webp 960w" sizes="(max-width: 640px) calc(100vw - 48px), 912px" />
+          <img src="assets/screenshots/sleepsleuth-current-sleep-blockers.png" alt="SleepSleuth showing current apps preventing sleep on macOS" width="960" height="600" loading="lazy" />
+        </picture>
+        <figcaption>
+          <strong>Current blockers</strong>
+          <span>See every active sleep-preventing assertion and how long it has been running.</span>
+        </figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/sleepsleuth-pinned-apps-640.webp 640w, assets/screenshots/sleepsleuth-pinned-apps-960.webp 960w" sizes="(max-width: 640px) calc(100vw - 48px), 444px" />
+          <img src="assets/screenshots/sleepsleuth-pinned-apps.png" alt="SleepSleuth showing pinned apps that it keeps awake intentionally" width="960" height="600" loading="lazy" />
+        </picture>
+        <figcaption>
+          <strong>Pinned work</strong>
+          <span>Keep specific apps or command-line tools awake on purpose.</span>
+        </figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/sleepsleuth-sleep-history-640.webp 640w, assets/screenshots/sleepsleuth-sleep-history-960.webp 960w" sizes="(max-width: 640px) calc(100vw - 48px), 444px" />
+          <img src="assets/screenshots/sleepsleuth-sleep-history.png" alt="SleepSleuth sleep history timeline with ended and active blockers" width="960" height="600" loading="lazy" />
+        </picture>
+        <figcaption>
+          <strong>Sleep history</strong>
+          <span>Review a local timeline of active and ended sleep blockers.</span>
+        </figcaption>
+      </figure>
+      <figure class="screenshot-card screenshot-card-wide">
+        <picture>
+          <source type="image/webp" srcset="assets/screenshots/sleepsleuth-agent-token-usage-640.webp 640w, assets/screenshots/sleepsleuth-agent-token-usage-960.webp 960w" sizes="(max-width: 640px) calc(100vw - 48px), 912px" />
+          <img src="assets/screenshots/sleepsleuth-agent-token-usage.png" alt="SleepSleuth agent token usage dashboard with daily usage and cost estimates" width="960" height="600" loading="lazy" />
+        </picture>
+        <figcaption>
+          <strong>Agent token usage</strong>
+          <span>Optionally inspect local coding-agent token totals, model breakdowns, and estimated costs.</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- What's New in 1.3 -->
   <section class="whats-new container" id="whats-new">
-    <div class="whats-new-badge">Version 1.1</div>
+    <div class="whats-new-badge">Version 1.3</div>
     <h2>What&rsquo;s New</h2>
     <div class="whats-new-grid">
       <div class="whats-new-card">
-        <div class="icon">&#128204;</div>
-        <h3>Pin Feature</h3>
-        <p>Keep your Mac awake for the apps that need it. Select any running app or command-line tool and SleepSleuth holds a sleep assertion on its behalf for as long as it runs &mdash; no <code>caffeinate</code> hacks needed.</p>
+        <div class="icon">&#128200;</div>
+        <h3>Agent Token Usage</h3>
+        <p>Add an optional card for local coding-agent token usage, daily heatmaps, model breakdowns, and estimated costs across Claude Code, OpenCode, Codex, OpenClaw, GitHub Copilot CLI, and more.</p>
       </div>
       <div class="whats-new-card">
-        <div class="icon">&#127919;</div>
-        <h3>Smart Re-Activation</h3>
-        <p>Pins persist across relaunches. When a pinned app comes back, SleepSleuth automatically re-applies the assertion. CLI tools like <code>ffmpeg</code> or <code>rsync</code> are tracked by executable path.</p>
+        <div class="icon">&#128338;</div>
+        <h3>Sleep History</h3>
+        <p>Review a local timeline of external sleep-preventing assertions, including active and ended state, end times, and durations.</p>
       </div>
       <div class="whats-new-card">
-        <div class="icon">&#9201;</div>
-        <h3>Live Duration</h3>
-        <p>The assertion detail view now shows a real-time elapsed counter so you can see exactly how long a process has been holding your Mac awake.</p>
+        <div class="icon">&#128451;</div>
+        <h3>Streamlined Home</h3>
+        <p>Compact card controls, Current and History tabs for sleep activity, simpler usage-source setup, and improved app settings keep the menu bar window focused.</p>
+      </div>
+      <div class="whats-new-card">
+        <div class="icon">&#9889;</div>
+        <h3>Faster Refreshes</h3>
+        <p>Token usage parsing is faster and more accurate, cached cost data stays stable, and navigation resets cleanly when the popover closes.</p>
       </div>
     </div>
   </section>
@@ -87,18 +142,28 @@
     <div class="features-grid">
       <div class="feature-card">
         <div class="icon">&#128269;</div>
-        <h3>Real-Time Monitoring</h3>
+        <h3>Real-Time Sleep Monitoring</h3>
         <p>Polls macOS power assertions every few seconds so you always have the latest picture &mdash; yellow icon means something is active, default means all clear.</p>
       </div>
       <div class="feature-card">
-        <div class="icon">&#128203;</div>
-        <h3>Detailed Assertion Info</h3>
-        <p>See the process name, PID, assertion type, and a live elapsed-time counter for each active assertion &mdash; all at a glance.</p>
+        <div class="icon">&#128338;</div>
+        <h3>Sleep History</h3>
+        <p>See a local timeline of sleep-preventing activity, including active and ended assertions with durations, so you can spot recurring blockers.</p>
       </div>
       <div class="feature-card">
         <div class="icon">&#128204;</div>
         <h3>Pin Any App or CLI Tool</h3>
         <p>Pick any running app or command-line tool from the inline process picker and SleepSleuth prevents sleep on its behalf. Pins survive relaunches and reactivate automatically.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128200;</div>
+        <h3>Agent Token Usage</h3>
+        <p>Optionally review daily local token totals, model breakdowns, and estimated costs for popular AI coding tools, all from a card you control.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">&#128193;</div>
+        <h3>Local Source Discovery</h3>
+        <p>Authorize your home folder once and SleepSleuth can detect common coding-tool usage folders using macOS security-scoped access.</p>
       </div>
       <div class="feature-card">
         <div class="icon">&#128276;</div>
@@ -113,7 +178,7 @@
       <div class="feature-card">
         <div class="icon">&#128171;</div>
         <h3>Lightweight &amp; Native</h3>
-        <p>Built with SwiftUI for macOS 14+. No Electron, no web views, no telemetry. Runs quietly in the menu bar with minimal resource usage.</p>
+        <p>Built with SwiftUI for macOS 14+. No Electron, no web views, no telemetry. Local data stays local and the app runs quietly in the menu bar.</p>
       </div>
     </div>
   </section>
@@ -129,13 +194,18 @@
       </div>
       <div class="step">
         <div class="step-number">2</div>
-        <h3>Monitor</h3>
+        <h3>Monitor Sleep</h3>
         <p>The icon turns yellow whenever something holds your Mac awake. Click to see the full list with details and live durations.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
         <h3>Control</h3>
-        <p>Drill into any process to see details or kill it. Pin apps that need to keep your Mac awake &mdash; SleepSleuth handles the rest.</p>
+        <p>Pin apps that need to keep your Mac awake, review sleep history, or drill into a process to see details and take action.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <h3>Track Usage</h3>
+        <p>Add the optional Agent Token Usage card when you want local AI coding usage and estimated costs beside your sleep controls.</p>
       </div>
     </div>
   </section>
@@ -143,7 +213,7 @@
   <!-- CTA -->
   <section class="cta container" id="download">
     <h2>Take back your Mac&rsquo;s sleep</h2>
-    <p>Free and built for macOS 14+.</p>
+    <p>Built for macOS 14+ and available on the Mac App Store.</p>
     <a href="https://apps.apple.com/app/id6759780816" class="btn btn-primary">Get it on the Mac App Store</a>
   </section>
 
