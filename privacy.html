@@ -45,10 +45,10 @@
   <!-- Content -->
   <main class="legal container">
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: February 27, 2026</p>
+    <p class="last-updated">Last updated: May 26, 2026</p>
 
     <h2>Overview</h2>
-    <p>SleepSleuth ("the App") is a macOS menu bar utility that monitors power assertions on your Mac. Your privacy is important to us. This policy explains what data the App accesses, how it is used, and your choices.</p>
+    <p>SleepSleuth ("the App") is a macOS menu bar utility that monitors power assertions on your Mac and can optionally read local coding-agent token usage files that you authorize. Your privacy is important to us. This policy explains what data the App accesses, how it is used, and your choices.</p>
 
     <h2>Data We Collect</h2>
     <p><strong>We do not collect, transmit, or store any personal data on external servers.</strong> SleepSleuth operates entirely on your device.</p>
@@ -59,6 +59,9 @@
       <li><strong>Power assertion data</strong> &mdash; The App uses Apple&rsquo;s IOPMLib API to query which processes currently hold power assertions (e.g., preventing sleep). This includes process names, process IDs, assertion types, and reasons.</li>
       <li><strong>Process metadata</strong> &mdash; For each process holding an assertion, the App may resolve the application name, bundle identifier, and icon from the local file system.</li>
       <li><strong>Assertion history</strong> &mdash; The App stores a rolling 7-day history of assertion events as a JSON file in your local Application Support directory (<code>~/Library/Application Support/SleepSleuth/</code>). This file never leaves your device.</li>
+      <li><strong>Optional token usage files</strong> &mdash; If you enable Agent Token Usage, the App reads local usage logs or databases from configured coding tools, such as Claude Code, OpenCode, Codex, OpenClaw, GitHub Copilot CLI, Amp, Codebuff, Droid, Gemini CLI, Goose, Hermes, Kilo Code, Kimi, Pi, and Qwen Code.</li>
+      <li><strong>Security-scoped bookmarks</strong> &mdash; When you authorize a folder or file for token usage, the App stores a macOS security-scoped bookmark so it can continue reading the selected local source.</li>
+      <li><strong>Token usage aggregates and cost cache</strong> &mdash; The App stores configured token usage sources and cached daily aggregates in app preferences. Estimated cost entries are cached locally in the SleepSleuth Application Support folder so historical cost calculations remain stable.</li>
     </ul>
 
     <h2>Data Sharing</h2>
@@ -77,7 +80,7 @@
     <p>SleepSleuth does not integrate with any third-party services, SDKs, or analytics platforms.</p>
 
     <h2>Data Retention</h2>
-    <p>Assertion history is automatically pruned to a 7-day rolling window. You can clear all history at any time from the History view within the App. Uninstalling the App and deleting the Application Support folder removes all stored data.</p>
+    <p>Assertion history is automatically pruned to a 7-day rolling window. Token usage source settings and cached aggregates remain local until you remove sources, clear caches from settings where available, reset app preferences, or uninstall the App. Uninstalling the App and deleting the Application Support folder removes locally stored SleepSleuth files.</p>
 
     <h2>Children&rsquo;s Privacy</h2>
     <p>SleepSleuth does not collect any personal information from anyone, including children under the age of 13.</p>

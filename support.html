@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Support - SleepSleuth</title>
-  <meta name="description" content="Get help with SleepSleuth, the macOS menu bar utility that monitors sleep-preventing processes." />
+  <meta name="description" content="Get help with SleepSleuth, the macOS menu bar utility for sleep-preventing processes and optional local coding-agent usage." />
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.ico" sizes="any" />
@@ -15,13 +15,13 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://sleepsleuth.app/support.html" />
   <meta property="og:title" content="Support - SleepSleuth" />
-  <meta property="og:description" content="Get help with SleepSleuth, the macOS menu bar utility that monitors sleep-preventing processes." />
+  <meta property="og:description" content="Get help with SleepSleuth, the macOS menu bar utility for sleep-preventing processes and optional local coding-agent usage." />
   <meta property="og:image" content="https://sleepsleuth.app/og-image.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Support - SleepSleuth" />
-  <meta name="twitter:description" content="Get help with SleepSleuth, the macOS menu bar utility that monitors sleep-preventing processes." />
+  <meta name="twitter:description" content="Get help with SleepSleuth, the macOS menu bar utility for sleep-preventing processes and optional local coding-agent usage." />
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -49,13 +49,13 @@
     <h2>Frequently Asked Questions</h2>
 
     <h3>What does SleepSleuth do?</h3>
-    <p>SleepSleuth is a macOS menu bar utility that monitors power assertions &mdash; system-level flags that prevent your Mac from sleeping. It shows you which apps and processes are keeping your Mac awake and for how long.</p>
+    <p>SleepSleuth is a macOS menu bar utility that monitors power assertions &mdash; system-level flags that prevent your Mac from sleeping. It shows you which apps and processes are keeping your Mac awake, lets you pin selected apps or command-line tools on purpose, and can optionally show local AI coding token usage.</p>
 
     <h3>What macOS version do I need?</h3>
     <p>SleepSleuth requires macOS 14 (Sonoma) or later.</p>
 
     <h3>Does SleepSleuth collect any data?</h3>
-    <p>No. SleepSleuth operates entirely on your device. It does not send any data over the network, and includes no analytics or tracking. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
+    <p>No. SleepSleuth operates entirely on your device. It does not send any data over the network, and includes no analytics or tracking. Optional token usage data is read from local files you authorize. See our <a href="privacy.html">Privacy Policy</a> for details.</p>
 
     <h3>Why is my Mac not sleeping?</h3>
     <p>Open SleepSleuth from the menu bar to see a list of all active power assertions. Each entry shows the process name, the reason it gave for preventing sleep, and how long the assertion has been active. Common culprits include video players, backup utilities, and file sync apps.</p>
@@ -65,6 +65,12 @@
 
     <h3>Where is history data stored?</h3>
     <p>Assertion history is stored locally at <code>~/Library/Application Support/SleepSleuth/history.json</code>. It is automatically pruned to a 7-day rolling window. You can clear all history from the History view within the app.</p>
+
+    <h3>How does Agent Token Usage work?</h3>
+    <p>The Agent Token Usage card reads local usage files from tools you configure, such as Claude Code, OpenCode, Codex, OpenClaw, GitHub Copilot CLI, Amp, Codebuff, Droid, Gemini CLI, Goose, Hermes, Kilo Code, Kimi, Pi, and Qwen Code. You can authorize your home folder for automatic discovery or add individual sources manually.</p>
+
+    <h3>Where is token usage data stored?</h3>
+    <p>Configured sources, cached daily aggregates, and security-scoped bookmarks are stored in app preferences. Estimated cost entries are cached locally at <code>~/Library/Application Support/SleepSleuth/cost-cache.json</code> so historical totals stay stable. Remove configured sources or delete the SleepSleuth Application Support folder to clear local files.</p>
 
     <h3>How do I uninstall SleepSleuth?</h3>
     <p>Drag the app to the Trash. To remove stored data as well, delete the folder at <code>~/Library/Application Support/SleepSleuth/</code>.</p>
