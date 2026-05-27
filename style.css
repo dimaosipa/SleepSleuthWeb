@@ -289,6 +289,10 @@ img {
   grid-column: span 2;
 }
 
+.screenshot-card picture {
+  display: block;
+}
+
 .screenshot-card img {
   width: 100%;
   height: auto;
